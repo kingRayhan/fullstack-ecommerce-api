@@ -1,8 +1,10 @@
 import { Body, Controller, Get, Param, Post, Query } from '@nestjs/common';
 import { AppService } from './app.service';
 import { ConfigService } from '@nestjs/config';
+import { ApiTags } from '@nestjs/swagger';
 
-@Controller('/todos')
+@Controller('/')
+@ApiTags('Root')
 export class AppController {
   // get data from client
   // querystring

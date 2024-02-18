@@ -1,7 +1,8 @@
 import { Module } from '@nestjs/common';
+import { ConfigModule } from '@nestjs/config';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { ConfigModule } from '@nestjs/config';
+import { ProductModule } from './api/product/product.module';
 
 import * as Joi from 'joi';
 import config from './config';
@@ -21,6 +22,7 @@ import config from './config';
         PORT: Joi.number().required(),
       }),
     }),
+    ProductModule,
   ],
   controllers: [AppController],
   providers: [AppService],

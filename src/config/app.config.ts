@@ -20,7 +20,7 @@ export default registerAs('app', () => ({
     | Set this in your ".env" file.
     | If not set, the default value is 3000.
     */
-  PORT: process.env.PORT || 3000,
+  port: process.env.PORT || 3000,
 
   /*
     |--------------------------------------------------------------------------
